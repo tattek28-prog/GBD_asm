@@ -1,0 +1,17 @@
+section .data
+
+section .bss
+sum resb 1
+
+section .text
+global _start
+_start:
+    
+mov al,999
+mov bl,2
+add al,bl
+mov [sum],al
+
+mov eax,1
+mov ebx,0
+int 80h
